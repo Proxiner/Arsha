@@ -1,0 +1,65 @@
+$thin: "jost-thin";
+$light: "jost-light";
+$extra-light: "jost-extra-light";
+$regular: "jost-regular";
+$medium: "jost-medium";
+$semi-bold: "jost-semi-bold";
+$bold: "jost-bold";
+$extra-bold: "jost-extra-bold";
+$black: "jost-black";
+
+$font-src: url("/assets/fonts/jost.ttf");
+
+@font-face {
+  font-family: $thin;
+  src: $font-src;
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: $light;
+  src: $font-src;
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: $extra-light;
+  src: $font-src;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: $regular;
+  src: $font-src;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: $medium;
+  src: $font-src;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: $semi-bold;
+  src: $font-src;
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: $bold;
+  src: $font-src;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: $extra-bold;
+  src: $font-src;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: $black;
+  src: $font-src;
+  font-weight: 900;
+}
