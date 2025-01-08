@@ -1,0 +1,76 @@
+@use "../../utils/mixins" as *;
+@use "../../themes/colors" as *;
+@use "../../base/typography" as *;
+
+.container {
+    @include flex(row, center, center);
+    width: 100%;
+
+    .heroContainer {
+        @include flex(row, center, center);
+        width: 100%;
+        height: 85vh;
+
+        .contextContainer {
+            @include flex(column, center, center);
+            width: 50%;
+            height: 100%;
+            gap: 10px;
+            // background-color: green;
+
+            h1 {
+                width: 600px;
+                font-family: $extra-bold;
+                font-size: 3.1rem;
+                line-height: 55px;
+                color: $white;
+            }
+
+            p {
+                width: 600px;
+                font-family: $medium;
+                font-size: 1.5rem;
+                line-height: 30px;
+                color: #c1cdd9;
+            }
+
+            .BTNConatiner {
+                @include flex(row, none, center);
+                width: 600px;
+                height: max-content;
+                margin-top: 20px;
+                gap: 20px;
+
+                button:nth-child(1) {
+                    width: 140px;
+                    height: 45px;
+                    font-family: $medium;
+                    font-size: 1rem;
+                    background-color: $accent;
+                    color: $white;
+                    border: none;
+                    border-radius: 50px;
+                }
+
+                button:nth-child(2) {
+                    @include flex(row, none, center);
+                    width: 140px;
+                    height: 45px;
+                    font-family: $medium;
+                    font-size: 1rem;
+                    background: none;
+                    color: $white;
+                    border: none;
+                    border-radius: 50px;
+                    gap: 8px;
+                }
+            }
+        }
+
+        .imgConatiner {
+            @include flex(row, center, center);
+            width: 50%;
+            height: 100%;
+        }
+    }
+}
