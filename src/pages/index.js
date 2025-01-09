@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Hero from "@layouts/hero.jsx"
+import Clients from "@layouts/clients.jsx"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <section className="hero">
         <Hero />
+        <Clients />
       </section>
     </>
   );

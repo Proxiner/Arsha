@@ -1,0 +1,18 @@
+@use "../../utils/mixins" as *;
+@use "../../themes/colors" as *;
+
+.conatiner {
+    @include flex (row, center ,center);
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    width: 100%;
+    height: 125px;
+    background-color: #f5f6f8;
+
+    .clientsLogo {
+        @include flex (row, space-around,center);
+        width: 85%;
+        height: max-content;
+    }
+}
