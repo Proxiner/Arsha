@@ -16,12 +16,12 @@ nav.navbar {
   grid-template-columns: 20% 80%;
   width: 100%;
   height: 100%;
-  padding: 1rem 6rem;
+  padding: 0 6rem;
   position: relative;
 
   @include responsive(phone) {
     padding: 0rem 1.2rem;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 30% 70%;
   }
 
   .contents {
@@ -45,10 +45,11 @@ nav.navbar {
     width: 100%;
     height: 100dvh;
     left: 0;
-    top: 60px;
+    top: 80px;
     padding: 2rem;
-    background-color: #222;
+    background-color: colors.$hero;
     animation: slideIn 0.6s ease-in-out forwards;
+    z-index: 5;
 
     li {
       color: colors.$white;

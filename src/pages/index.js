@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "@layouts/hero.jsx"
 import Navbar from "@layouts/navbar";
+import Clients from "@/ui/layouts/clients";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           <Hero />
         </div>
       </section>
+      <Clients />
     </>
   );
 }

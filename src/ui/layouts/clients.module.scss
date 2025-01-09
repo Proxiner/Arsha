@@ -1,18 +1,26 @@
 @use "../../utils/mixins" as *;
 @use "../../themes/colors" as *;
 
-.conatiner {
-    @include flex (row, center ,center);
-    // display: flex;
-    // align-items: center;
-    // justify-content: space-around;
-    width: 100%;
-    height: 125px;
-    background-color: #f5f6f8;
+.clientsLogo {
+  @include flex(row, space-evenly, center);
+  flex-wrap: wrap;
+  width: 100%;
+  height: max-content;
+  background-color: #fff;
+  gap: 2rem;
+  padding: 1rem 0;
 
-    .clientsLogo {
-        @include flex (row, space-around,center);
-        width: 85%;
-        height: max-content;    
+  img {
+    filter: grayscale(100%);
+    transition: all ease-in-out 0.3s;
+    cursor: pointer;
+
+    @include responsive(phone) {
+      filter: grayscale(0%);
     }
+  }
+
+  img:hover {
+    filter: grayscale(0%);
+  }
 }

@@ -6,11 +6,11 @@ import Menu from "../components/menu";
 
 export default function Navbar() {
   const [isMobile, setIsMobile] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // Add state for menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 1047); // Use `innerWidth` for accurate resizing
+      setIsMobile(window.innerWidth < 1047);
     };
 
     checkScreenSize();
@@ -23,8 +23,11 @@ export default function Navbar() {
 
   const handleMenuToggle = (checked) => {
     setIsMenuOpen(checked);
+    document.body.style.overflow = checked ? "hidden" : "auto";
+    document.documentElement.style.overflow = checked ? "hidden" : "auto";
     console.log("Menu Open State:", checked);
   };
+
   return (
     <nav className={styles.navbar}>
       <section className={styles.logo_container}>

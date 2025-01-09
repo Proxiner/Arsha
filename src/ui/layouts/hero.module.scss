@@ -2,10 +2,13 @@
 @use "../../themes/colors" as *;
 @use "../../base/typography" as *;
 
+$animation-duration: 4s;
+$animation-timing: ease-in-out;
+
 .heroContainer {
   @include flex(row, center, center);
   width: 100%;
-  height: 85vh;
+  height: 100%;
   padding: 0 6rem;
 
   @include responsive(phone) {
@@ -101,6 +104,20 @@
     @include flex(row, flex-end, center);
     width: 50%;
     height: 100%;
+
+    animation: moveUpDown $animation-duration $animation-timing infinite;
+
+    @keyframes moveUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
 
     img {
       width: 100%;
