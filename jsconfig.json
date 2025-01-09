@@ -2,7 +2,9 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./src/*"],
-      "@ui/*": ["./src/ui/*"]
+      "@ui/*": ["./src/ui/*"],
+      "@layouts/*": ["./src/ui/layouts/*"],
+      "@components/*": ["./src/ui/components/*"]
     }
   }
 }

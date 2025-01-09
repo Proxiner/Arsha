@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Hero from "@layouts/hero.jsx"
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="hero">
-        {/* content goes here */}
+        <Hero />
       </section>
     </>
   );
