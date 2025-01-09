@@ -13,6 +13,6 @@
     .clientsLogo {
         @include flex (row, space-around,center);
         width: 85%;
-        height: max-content;
+        height: max-content;    
     }
 }
