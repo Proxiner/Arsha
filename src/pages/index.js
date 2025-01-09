@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Hero from "@layouts/hero.jsx"
-import Clients from "@layouts/clients.jsx"
+import Navbar from "@layouts/navbar";
 
 export default function Home() {
   return (
@@ -12,8 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="hero">
-        <Hero />
-        <Clients />
+        <div className="nav-container">
+          <Navbar />
+        </div>
+        <div className="hero-container">
+          <Hero />
+        </div>
       </section>
     </>
   );

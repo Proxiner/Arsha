@@ -2,75 +2,122 @@
 @use "../../themes/colors" as *;
 @use "../../base/typography" as *;
 
-.container {
-    @include flex(row, center, center);
-    width: 100%;
+.heroContainer {
+  @include flex(row, center, center);
+  width: 100%;
+  height: 85vh;
+  padding: 0 6rem;
 
-    .heroContainer {
-        @include flex(row, center, center);
-        width: 100%;
-        height: 85vh;
+  @include responsive(phone) {
+    @include flex(column, center, center);
+    padding: 0 1.2rem;
+    margin-top: 2rem;
+    gap: 1.4rem;
+  }
 
-        .contextContainer {
-            @include flex(column, center, center);
-            width: 50%;
-            height: 100%;
-            gap: 10px;
-            // background-color: green;
+  .contextContainer {
+    @include flex(column, center, center);
+    width: 50%;
+    height: 100%;
+    gap: 10px;
 
-            h1 {
-                width: 600px;
-                font-family: $extra-bold;
-                font-size: 3.1rem;
-                line-height: 55px;
-                color: $white;
-            }
-
-            p {
-                width: 600px;
-                font-family: $medium;
-                font-size: 1.5rem;
-                line-height: 30px;
-                color: #c1cdd9;
-            }
-
-            .BTNConatiner {
-                @include flex(row, none, center);
-                width: 600px;
-                height: max-content;
-                margin-top: 20px;
-                gap: 20px;
-
-                button:nth-child(1) {
-                    width: 140px;
-                    height: 45px;
-                    font-family: $medium;
-                    font-size: 1rem;
-                    background-color: $accent;
-                    color: $white;
-                    border: none;
-                    border-radius: 50px;
-                }
-
-                button:nth-child(2) {
-                    @include flex(row, none, center);
-                    width: 140px;
-                    height: 45px;
-                    font-family: $medium;
-                    font-size: 1rem;
-                    background: none;
-                    color: $white;
-                    border: none;
-                    border-radius: 50px;
-                    gap: 8px;
-                }
-            }
-        }
-
-        .imgConatiner {
-            @include flex(row, center, center);
-            width: 50%;
-            height: 100%;
-        }
+    @include responsive(phone) {
+      @include flex(column, center, flex-start);
+      width: 100%;
+      height: 50%;
+      gap: 0.5rem;
     }
+
+    h1 {
+      max-width: 600px;
+      width: 100%;
+      font-family: $extra-bold;
+      font-size: 3.1rem;
+      line-height: 55px;
+      color: $white;
+
+      @include responsive(phone) {
+        width: 80%;
+        font-size: 2rem;
+        line-height: 2.4rem;
+      }
+    }
+
+    p {
+      max-width: 600px;
+      width: 100%;
+      font-family: $medium;
+      font-size: 1.5rem;
+      line-height: 30px;
+      color: #c1cdd9;
+
+      @include responsive(phone) {
+        width: 85%;
+        font-size: 1.2rem;
+      }
+    }
+
+    .BTNConatiner {
+      @include flex(row, none, center);
+      max-width: 600px;
+      width: 100%;
+      height: max-content;
+      margin-top: 20px;
+      gap: 20px;
+
+      @include responsive(phone) {
+        width: 100%;
+        font-size: 1.2rem;
+        margin-top: 1rem;
+      }
+
+      button:nth-child(1) {
+        width: 140px;
+        height: 45px;
+        font-family: $medium;
+        font-size: 1rem;
+        background-color: $accent;
+        color: $white;
+        border: none;
+        border-radius: 50px;
+      }
+
+      button:nth-child(2) {
+        @include flex(row, none, center);
+        width: 140px;
+        height: 45px;
+        font-family: $medium;
+        font-size: 1rem;
+        background: none;
+        color: $white;
+        border: none;
+        border-radius: 50px;
+        gap: 8px;
+      }
+    }
+  }
+
+  .imgConatiner {
+    @include flex(row, flex-end, center);
+    width: 50%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      max-width: 500px;
+      max-height: 400px;
+      height: 100%;
+    }
+
+    @include responsive(phone) {
+      width: 100%;
+      height: 50%;
+      padding: 0.5rem;
+
+      img {
+        max-width: 360px;
+        max-height: 240px;
+      }
+    }
+  }
 }

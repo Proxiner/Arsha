@@ -4,6 +4,7 @@
       "@/*": ["./src/*"],
       "@ui/*": ["./src/ui/*"],
       "@layouts/*": ["./src/ui/layouts/*"],
+      "@components/*": ["./src/ui/components/*"]
     }
   }
 }
