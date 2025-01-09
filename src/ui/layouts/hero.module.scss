@@ -5,6 +5,7 @@
 .container {
   @include flex(row, center, center);
   width: 100%;
+  height: 100%;
 
   .heroContainer {
     @include flex(row, center, center);
@@ -16,7 +17,6 @@
       width: 50%;
       height: 100%;
       gap: 10px;
-      // background-color: green;
 
       h1 {
         width: 600px;
