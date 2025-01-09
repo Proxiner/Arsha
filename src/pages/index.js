@@ -12,8 +12,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <section className="hero">
-        <Navbar />
-        <Hero />
+        <div className="nav-container">
+          <Navbar />
+        </div>
+        <div className="hero-container">
+          <Hero />
+        </div>
       </section>
     </>
   );

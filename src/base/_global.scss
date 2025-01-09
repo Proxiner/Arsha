@@ -7,4 +7,11 @@
   width: 100%;
   height: 100dvh;
   background-color: colors.$hero;
+
+  .wrapper {
+    position: fixed;
+    height: max-content;
+    inset: 0;
+    background-color: green;
+  }
 }

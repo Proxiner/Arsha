@@ -22,5 +22,11 @@ a {
   height: 100dvh;
   background-color: #37517e;
 }
+.hero .wrapper {
+  position: fixed;
+  height: max-content;
+  inset: 0;
+  background-color: green;
+}
 
 /*# sourceMappingURL=main.css.map */
